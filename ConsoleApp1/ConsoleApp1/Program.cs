@@ -8,25 +8,49 @@ class Program
     static void Main(string[] args)
     {
 
+        /* LINQ Examples */
 
-        int[] numbers = { 1, 2, 3, 4, 5 };
-        var evenNumbers = numbers.Where(n => n % 2 == 0).Select(x => x);
-        foreach (var item in evenNumbers)
-        {
-            Console.WriteLine(item);
-        }
-        Console.ReadLine();
+        // (1) Distinct Numbers
+        var lst=new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4 };
+        var _dist = lst.Distinct();
 
 
-        // IEnumerable Example   
-        int[] numbers1 = { 1, 2, 3, 4, 5 };
-        IEnumerable<int> a = numbers1.Where(n => n % 2 == 0).Select(x => x).ToList<int>();
+        // (2) Filtering    
+        var lst_filter = new List<int> { 1, 2, 3, 4, 5, 6, 7 };
+        var even = lst_filter.Where(x => x % 2 == 0);
+        var odd = lst_filter.Where(x => x % 2 != 0);
 
-        foreach (int item in a)
-        {
-            Console.WriteLine(item);
-        }
-        Console.ReadLine();
+        // (3) Sorting   
+        var lst_sort = new List<int> { 1, 2, 3, 4, 5, 6, 7 };
+        var sor_asc = lst_sort.OrderBy(x => x);
+        var sor_desc = lst_sort.OrderByDescending(x => x);
+
+
+        // (4) First() and FirstOrDefault()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         //ArrayList al = new ArrayList();
@@ -142,7 +166,7 @@ class Program
 
     public List<T> AddElementsToList<T>()
     {
-        List <T> reult = new List<T>();
+        List<T> reult = new List<T>();
 
         return reult;
     }
